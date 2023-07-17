@@ -20,7 +20,6 @@ function loadQuestion() {
           // Display the question and answers on the page
           displayQuestionAndAnswers(id, question, difficulty, answers);
         } else {
-          //console.log('Failed to fetch question and answers.');
           Swal.fire({
             icon: 'error',
             title: 'Error',
@@ -29,7 +28,6 @@ function loadQuestion() {
         }
       },
       error: function(xhr, status, error) {
-        //console.log('Error:', error);
         Swal.fire({
           icon: 'error',
           title: 'Error',
@@ -68,7 +66,6 @@ loadQuestion();
               var isCorrect = response.result;
 
               // Display the result to the user
-              //displayResult(isCorrect);
               Swal.fire({
                 icon: 'success',
                 title: 'Correcto',
@@ -97,7 +94,6 @@ loadQuestion();
             }
           },
           error: function(xhr, status, error) {
-            //console.log('Error:', error);
             stop_loading();
             Swal.fire({
               icon: 'error',
@@ -107,7 +103,6 @@ loadQuestion();
           }
         });
       } else {
-        //console.log('No answer selected.');
         stop_loading();
         Swal.fire({
           icon: 'warning',
