@@ -146,7 +146,7 @@ loadQuestion();
     function loading()
     {
       $('.submit-button').attr("disabled","disabled");
-      $('.submit-button').html("<i class='fa fa-circle-o-notch fa-pulse'></i> Validando Respuesta...");
+      $('.submit-button').html("<i class='fa fa-circle-o-notch fa-pulse'></i> Validando");
     }
 
     function stop_loading()
