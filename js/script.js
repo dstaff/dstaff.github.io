@@ -6,7 +6,7 @@ function loadQuestion() {
     questionContainer.text("Cargando Pregunta...");
 
     $.ajax({
-      url: 'https://thedstaff.com/php/get_questions.php',
+      url: 'https://thedstaff.com/quickquiz',
       method: 'GET',
       dataType: 'json',
       success: function(response) {
