@@ -138,6 +138,7 @@ loadQuestion();
       });
     }
 
+    //preloading gadgets
     function loading()
     {
       $('.submit-button').attr("disabled","disabled");
