@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quick Quiz</title>
-  <script src="https://kit.fontawesome.com/95ba443076.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Movie CRUD App</title>
+	
+    <!--link rel="stylesheet" href="styles.css"-->
 </head>
-
 <body>
-  <div class="container">
 
-    <h1 class="game-title">Quick Quiz</h1>
+    <div class="container">
+        <h1>Movie CRUD App</h1>
+		
+		<button id="export-csv">Export to CSV</button>
+		
+        <form id="movie-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="director" placeholder="Director" required>
+            <input type="number" id="year" placeholder="Year" required>
+            <button type="submit" id="add-movie">Add Movie</button>
+        </form>
+		
+        <input type="text" id="search" placeholder="Search">
+		
+		<form id="load-csv">
+			<input type="file" id="csv-file" accept=".csv">
+			<button type="submit">Load CSV</button>
+		</form>
 
-    <div class="game-content">
-
-      <h2 class="question-text"></h2>
-
-      <p class="question-difficulty"></p>
-
-      <div class="answers">
-      </div>
-
-      <div class="button-container">
-        <input class="question-id" type="hidden" name="hiddenField" value="">
-        <button class="submit-button">Responder</button>
-      </div>
-
+        <ul id="movie-list"></ul>
     </div>
-    
-  </div>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/script.js"></script>
+	
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+	
 </body>
-
 </html>
-<!--CREATED BY: DANIS STAFF-->
-<!--USING CHATGPT-->
