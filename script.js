@@ -21,15 +21,15 @@ $(document).ready(function() {
         movieList.empty();
         movies.forEach(function(movie, index) {
             movieList.append(`
-                <li>
-                    <span class="movie-index">${index + 1}</span>
-                    <span class="movie-title">${movie.title}</span>
-                    <span class="movie-director">${movie.director}</span>
-                    <span class="movie-year">${movie.year}</span>
-                    <button class="edit-movie" data-index="${index}">Edit</button>
-                    <button class="delete-movie" data-index="${index}">Delete</button>
-					<button class="view-movie" data-index="${index}">View</button>
-                </li>
+                <tr>
+                    <td class="movie-index">${index + 1}</td>
+                    <td class="movie-title">${movie.title}</td>
+                    <td class="movie-director">${movie.director}</td>
+                    <td class="movie-year">${movie.year}</td>
+                    <td><button class="edit-movie" data-index="${index}">Edit</button></td>
+                    <td><button class="delete-movie" data-index="${index}">Delete</button></td>
+		    <td><button class="view-movie" data-index="${index}">View</button></td>
+                </tr>
             `);
         });
 		console.log(movies);
@@ -137,15 +137,15 @@ $(document).ready(function() {
         movieList.empty();
         filteredMovies.forEach(function(movie, index) {
             movieList.append(`
-                <li>
-                    <span class="movie-index">${index + 1}</span>
-                    <span class="movie-title">${movie.title}</span>
-                    <span class="movie-director">${movie.director}</span>
-                    <span class="movie-year">${movie.year}</span>
-                    <button class="edit-movie" data-index="${index}">Edit</button>
-                    <button class="delete-movie" data-index="${index}">Delete</button>
-					<button class="view-movie" data-index="${index}">View</button>
-                </li>
+                <tr>
+                    <td class="movie-index">${index + 1}</td>
+                    <td class="movie-title">${movie.title}</td>
+                    <td class="movie-director">${movie.director}</td>
+                    <td class="movie-year">${movie.year}</td>
+                    <td><button class="edit-movie" data-index="${index}">Edit</button></td>
+                    <td><button class="delete-movie" data-index="${index}">Delete</button></td>
+	            <td><button class="view-movie" data-index="${index}">View</button></td>
+                </tr>
             `);
         });
 		
