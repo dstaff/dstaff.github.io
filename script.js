@@ -19,6 +19,7 @@ $(document).ready(function() {
         const movies = getMovies();
         const movieList = $('#movie-list');
         movieList.empty();
+	movieList.append(drawHTableHeaders());
         movies.forEach(function(movie, index) {
             movieList.append(`
                 <tr>
@@ -135,6 +136,7 @@ $(document).ready(function() {
     function displayFilteredMovies(filteredMovies) {
         const movieList = $('#movie-list');
         movieList.empty();
+	movieList.append(drawHTableHeaders());
         filteredMovies.forEach(function(movie, index) {
             movieList.append(`
                 <tr>
@@ -198,6 +200,21 @@ $(document).ready(function() {
         }
         return movies;
     }
+
+   function drawHTableHeaders(){
+	   
+	   var tableHeaders = "<tr>";
+	   tableHeaders += "<th>Index</th>";
+	   tableHeaders += "<th>Title</th>";
+	   tableHeaders += "<th>Director</th>";
+	   tableHeaders += "<th>Year</th>";
+	   tableHeaders += "<th></th>";
+	   tableHeaders += "<th></th>";
+	   tableHeaders += "<th></th>";
+	   tableHeaders += "</tr>";
+
+	   return tableHeaders;
+   }
 	
 	
 });
