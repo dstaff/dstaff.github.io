@@ -193,8 +193,8 @@ $(document).ready(function() {
             const fields = lines[i].split(',');
             if (fields.length === 3) {
                 const [title, director, year] = fields.map(field => field.trim());
-                if (title && director && !isNaN(year)) {
-                    movies.push({ title, director, year: parseInt(year) });
+                if (title && director && year) {
+                    movies.push({ title, director, year });
                 }
             }
         }
