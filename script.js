@@ -188,14 +188,11 @@ $(document).ready(function() {
 	// Function to parse CSV data into an array of objects
     function parseCSV(csvData) {
         const lines = csvData.split('\n');
-	alert("X1"+lines);
         const movies = [];
         for (let i = 1; i < lines.length; i++) { // Start from 1 to skip header
-	    alert("X2"+lines.length);
             const fields = lines[i].split(',');
-	    alert("X3"+fields);
+            alert("X1"+fields.length);
             if (fields.length === 3) {
-		alert("X4"+fields.length);
                 const [title, director, year] = fields.map(field => field.trim());
                 if (title && director && year) {
 	            alert("X5"+title);
