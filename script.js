@@ -191,14 +191,14 @@ $(document).ready(function() {
 	alert("X1"+lines);
         const movies = [];
         for (let i = 1; i < lines.length; i++) { // Start from 1 to skip header
-	    alert("X2"+lines.length):
+	    alert("X2"+lines.length);
             const fields = lines[i].split(',');
 	    alert("X3"+fields);
             if (fields.length === 3) {
 		alert("X4"+fields.length);
                 const [title, director, year] = fields.map(field => field.trim());
                 if (title && director && year) {
-	            alert(title);
+	            alert("X5"+title);
                     movies.push({ title, director, year });
                 }
             }
